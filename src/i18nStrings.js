@@ -87,7 +87,7 @@ const en = {
   removeTitle: 'Remove stream link',
   errorUrl: 'Stream link must start with http:// or https://',
   disclaimer: '⚠️ Only share links you have the rights to. This site is for personal use.',
-  makeMotd: '⭐ Make this the Match of the Day',
+  makeMotd: '⭐ Make MOTD',
   timeTbc: 'TBC',
   postsTitle: 'Football Posts',
   postsSub_one: '{n} story about the beautiful game',

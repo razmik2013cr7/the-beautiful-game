@@ -183,7 +183,7 @@ export default function MatchDetail() {
       {isAdmin && !match.isMatchOfTheDay && (
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 16 }}>
           <button className="btn-gold" onClick={pickMotd}>
-            ⭐ {t('makeMotd')}
+            {t('makeMotd')}
           </button>
         </div>
       )}

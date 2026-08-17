@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { getMatches, getPosts, kickOffInstant } from '../store.js'
+import { getMatches, getPosts, kickOffInstant, setMatchOfTheDay } from '../store.js'
 import { useI18n } from '../i18n.jsx'
 import { useAuth } from '../auth.jsx'
 import { useAsync } from '../useAsync.js'
@@ -13,11 +13,18 @@ export default function Home() {
   const { t } = useI18n()
   const { isAdmin } = useAuth()
   useHead('metaHome', 'metaHomeDesc')
-  const { data: matches = [] } = useAsync(getMatches)
+  const { data: matches = [], refresh } = useAsync(getMatches)
   const { data: posts = [] } = useAsync(getPosts)
 
   const motd = matches.find((m) => m.isMatchOfTheDay)
   const latestPosts = posts.slice(0, 3)
+
+  const handleMotdClick = async () => {
+    if (motd) {
+      await setMatchOfTheDay(motd.id)
+      refresh()
+    }
+  }
 
   const now = new Date()
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime()
@@ -80,7 +87,7 @@ export default function Home() {
             <h2>{t('motdTitle')}</h2>
             <div className="rule" />
           </div>
-          <MatchCard match={motd} featured />
+          <MatchCard match={motd} featured onMotdClick={handleMotdClick} />
         </>
       )}
 
