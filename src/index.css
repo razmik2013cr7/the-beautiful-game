@@ -126,15 +126,16 @@ button:active {
 }
 
 .btn-gold {
-  background: linear-gradient(135deg, var(--gold), #d49000);
+  background: var(--gold);
   color: #3a2a00;
-  padding: 12px 24px;
+  padding: 12px 28px;
   border-radius: 12px;
   font-size: 15px;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(240, 165, 0, 0.3);
 }
 
 .btn-gold:hover {
@@ -223,6 +224,7 @@ label {
 
 /* ---------- Card ---------- */
 .card {
+  display: block;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
