@@ -38,6 +38,9 @@ export default function Tables() {
   const [competition, setCompetition] = useState('')
   const [rows, setRows] = useState([EMPTY_ROW])
   const [error, setError] = useState('')
+  const [selectedLeague, setSelectedLeague] = useState('all')
+
+  const filtered = selectedLeague === 'all' ? tables : tables.filter((t) => t.competition === selectedLeague)
 
   const openNew = () => {
     setEditing(null)
@@ -226,7 +229,26 @@ export default function Tables() {
           </div>
         </div>
       ) : (
-        tables.map((table) => (
+        <>
+          {tables.length > 1 && (
+            <div className="league-filter">
+              <label htmlFor="leagueSelect">{t('viewLeague')}</label>
+              <select
+                id="leagueSelect"
+                className="league-select"
+                value={selectedLeague}
+                onChange={(e) => setSelectedLeague(e.target.value)}
+              >
+                <option value="all">{t('allLeagues')}</option>
+                {tables.map((tbl) => (
+                  <option key={tbl.competition} value={tbl.competition}>
+                    {getLeagueFlag(tbl.competition)} {tbl.competition}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+          {filtered.map((table) => (
           <section key={table.competition} style={{ marginBottom: 32 }}>
             <div className="section-title" style={{ marginTop: 0 }}>
               <h2>
@@ -296,7 +318,8 @@ export default function Tables() {
               </table>
             </div>
           </section>
-        ))
+          ))}
+        </>
       )}
     </div>
   )
