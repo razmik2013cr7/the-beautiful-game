@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thebeautifulgame.app/sitemap.xml
+Sitemap: https://the-beautiful-game-sage.vercel.app/sitemap.xml
