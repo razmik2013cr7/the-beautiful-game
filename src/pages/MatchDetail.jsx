@@ -178,15 +178,15 @@ export default function MatchDetail() {
         <div className="meta" style={{ justifyContent: 'center', marginTop: 16 }}>
           🗓 {match.date} · ⏱ {match.time || t('timeTbc')} · 📍 {match.venue || t('venueTbc')} · {kickOff}
         </div>
-
-        {isAdmin && !match.isMatchOfTheDay && (
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: 18 }}>
-            <button className="btn-gold" onClick={pickMotd}>
-              {t('makeMotd')}
-            </button>
-          </div>
-        )}
       </div>
+
+      {isAdmin && !match.isMatchOfTheDay && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 16 }}>
+          <button className="btn-gold" onClick={pickMotd}>
+            ⭐ {t('makeMotd')}
+          </button>
+        </div>
+      )}
 
       {isAdmin && (
         <>
