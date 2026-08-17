@@ -795,6 +795,68 @@ label {
   text-align: center;
 }
 
+/* ---------- Share ---------- */
+.share-wrapper {
+  position: relative;
+}
+
+.share-btn {
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.share-btn:hover {
+  background: var(--blue-soft);
+  color: var(--blue);
+  transform: none;
+}
+
+.share-menu {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: var(--shadow);
+  z-index: 60;
+  min-width: 160px;
+  animation: fadeUp 0.15s ease;
+}
+
+.share-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.share-option:hover {
+  background: var(--bg-soft);
+  transform: none;
+}
+
 /* ---------- Skeleton ---------- */
 .skeleton {
   background: var(--skeleton-base);

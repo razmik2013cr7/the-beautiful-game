@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1219"/>
+      <stop offset="100%" stop-color="#1a2030"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d5bff"/>
+      <stop offset="100%" stop-color="#e5323d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="60" y="540" width="1080" height="4" rx="2" fill="url(#accent)"/>
+  <circle cx="1050" cy="120" r="200" fill="rgba(229,50,61,0.08)"/>
+  <circle cx="150" cy="500" r="160" fill="rgba(29,91,255,0.08)"/>
+  <text x="60" y="200" font-family="system-ui, sans-serif" font-size="72" font-weight="800" fill="#ffffff" letter-spacing="-2">⚽ The Beautiful Game</text>
+  <text x="60" y="280" font-family="system-ui, sans-serif" font-size="32" font-weight="400" fill="#7b8ba8">Football fixtures, scores &amp; stream links</text>
+  <text x="60" y="360" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#6c7b96">Premier League · La Liga · Serie A · Bundesliga · Ligue 1</text>
+  <rect x="60" y="420" width="240" height="56" rx="14" fill="#1d5bff"/>
+  <text x="180" y="456" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Live Fixtures</text>
+  <rect x="320" y="420" width="200" height="56" rx="14" fill="rgba(29,91,255,0.15)" stroke="#1d5bff" stroke-width="2"/>
+  <text x="420" y="456" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#1d5bff" text-anchor="middle">Stream Links</text>
+</svg>

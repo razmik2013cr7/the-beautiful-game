@@ -39,13 +39,19 @@ export function useHead(titleKey, descKey) {
     ogType.content = 'website'
 
     const twitterCard = getOrCreateMeta('twitter:card', 'twitter:card')
-    twitterCard.content = 'summary'
+    twitterCard.content = 'summary_large_image'
 
     const twitterTitle = getOrCreateMeta('twitter:title', 'twitter:title')
     twitterTitle.content = title
 
     const twitterDesc = getOrCreateMeta('twitter:description', 'twitter:description')
     twitterDesc.content = desc
+
+    const ogImage = getOrCreateMeta('og:image', 'og:image')
+    ogImage.content = window.location.origin + '/og-image.png'
+
+    const twitterImage = getOrCreateMeta('twitter:image', 'twitter:image')
+    twitterImage.content = window.location.origin + '/og-image.png'
 
     document.documentElement.lang = lang
   }, [titleKey, descKey, lang, t])

@@ -4,6 +4,7 @@ import { findPost, formatDate } from '../store.js'
 import { CATEGORY_KEYS } from '../i18nStrings.js'
 import { useI18n } from '../i18n.jsx'
 import { useAsync } from '../useAsync.js'
+import Share from '../components/Share.jsx'
 
 export default function PostDetail() {
   const { postId } = useParams()
@@ -39,10 +40,11 @@ export default function PostDetail() {
 
         <div className="body">{post.content}</div>
 
-        <div style={{ marginTop: 28, display: 'flex', gap: 12 }}>
+        <div style={{ marginTop: 28, display: 'flex', gap: 12, alignItems: 'center' }}>
           <button className="btn-ghost" onClick={() => navigate('/posts')}>
             {t('backBtn')}
           </button>
+          <Share title={post.title} />
         </div>
       </article>
     </div>

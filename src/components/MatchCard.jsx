@@ -3,6 +3,7 @@ import { formatMatchDate, getLeagueFlag } from '../store.js'
 import { useI18n } from '../i18n.jsx'
 import { useAuth } from '../auth.jsx'
 import Crest from './Crest.jsx'
+import Share from './Share.jsx'
 
 export default function MatchCard({ match, featured = false, onMotdClick }) {
   const { t, tp, lang } = useI18n()
@@ -59,6 +60,10 @@ export default function MatchCard({ match, featured = false, onMotdClick }) {
           📺 {tp('streamCount', (match.streams || []).length)}
         </div>
       )}
+
+      <div style={{ marginTop: 12, display: 'flex', justifyContent: 'center' }} onClick={(e) => e.preventDefault()}>
+        <Share title={`${match.homeTeam} vs ${match.awayTeam}`} />
+      </div>
     </>
   )
 
