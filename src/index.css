@@ -131,6 +131,10 @@ button:active {
   padding: 12px 24px;
   border-radius: 12px;
   font-size: 15px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .btn-gold:hover {
@@ -252,6 +256,7 @@ label {
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 999px;
+  white-space: nowrap;
 }
 
 .badge-blue {
